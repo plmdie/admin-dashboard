@@ -1,32 +1,120 @@
-
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'PT Sans', sans-serif;
 }
+
 
 #container{
     display: grid;
     grid-template-columns: 1fr 6fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: auto 4fr;
+   height: 100vh;
     
 }
 
 #header{
-    padding: 2vh 1vw ;
+    min-height: min(200px, 20vh);
+    padding: 2vh 2vw 2vh 3vw;
     grid-column: 2 / 3;
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 2fr;
-    background-color: bisque;
+    row-gap: 2vh;
 }
 
+input{
+    border: none;
+    background-color: transparent;
+    outline: none;
+    border-radius: 15px;
+    padding: 5px 5px;
+    width: 25vw;
+    background-color: rgb(211, 211, 211);
+}
+
+#welcome{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    font-weight: bold ;
+}
+
+#welcome p:last-child{
+    font-size: max(1.3vw, 17px);
+}
+
+#user .profile{
+    width: max(35px, 2.5vw);
+    height: max(35px, 2.5vw); 
+    background-size: max(25px, 1.7vw) max(25px, 1.7vw);
+}
+
+#user p{
+    font-weight: bold;
+    
+}
+
+.profile{
+    display: inline-block;
+    background-color: #FDE68A;
+    border-radius: 50%;
+    width: max(50px, 3.5vw);
+    height: max(50px, 3.5vw);
+    background-image: url('./img/avatar1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: max(40px, 2.5vw) max(40px, 2.5vw);
+}
+
+
+#searchbar {
+    align-self: center;
+    justify-self: start;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+#user{
+    padding-right: 2vw;
+    align-self: center;
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+#buttons{
+    align-self: center;
+    justify-self: end;
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+}
+
+button{
+    font-size: max(.8vw, 15px);
+    font-weight: bold;
+    background-color: #51a8da;
+    border-radius: 30px;
+    width: max(60px, 5vw);
+    height: 4vh;
+    border: none;
+    outline: none;
+}
+
+
+
 #sidebar{
-    height: 100vh;
+    min-width: max(200px, 15vw);
+    height: 100%;
     padding: 2vh 1vw ;
     grid-row: 1 / 3;
-    background-color: burlywood;
+    background-color: #51a8da;
 }
 
 .logo img{width: 40px;}
@@ -38,48 +126,65 @@
 .first-links ul, .secondary-links ul{
     display: flex;
     flex-direction: column;
-    gap: 2vh;
+    gap: 2.7vh;
 }
 
 .first-links li, .secondary-links li{
     cursor: pointer;
+    
 }
 
-.first-links li:hover  p, .secondary-links li:hover p{border-bottom: 1px solid black;}
+.first-links li p, .secondary-links li p{border-bottom: 2px solid transparent;}
+
+.first-links li:hover p, .secondary-links li:hover p{
+    border-bottom: 2px solid black;
+    /* scale: 1.1; */
+}
 
 
 .logo{
     display: flex;
     align-items: center;
     gap: 1vw;
+    font-size: 17px;
 }
 
 li{
     display: flex;
     align-items: center;
     gap: 1vw;
+    padding-left: .6vw;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-li {padding-left: .6vw;}
+
 
 #main-content{
-    padding: 2vh 1vw ;
+    padding: 3vh 1.5vw ;
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 4fr 1fr;
+    background-color: rgb(226, 226, 226);
+    -webkit-box-shadow: inset 1px 4px 9px -6px;
+    -moz-box-shadow: inset 1px 4px 9px -6px;;
+    box-shadow: inset 1px 4px 9px -6px;
 }
 
 #cards{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: auto 1fr 1fr;
+    gap: 20px;
 }
 
 .card{
-    background-color: aqua;
+    padding: 2vh 2vw;
+    border-radius: 10px;
+    background-color: white;
 }
 
 #side-content{
-    padding: 2vh 1vw ;
+    padding: 0 1vw ;
     display: grid;
     grid-template-rows: 1fr 1fr;
 }
