@@ -17,8 +17,8 @@
 }
 
 #header{
-    min-height: min(200px, 20vh);
-    padding: 2vh 2vw 2vh 3vw;
+    min-height: max(120px, 20vh);
+    padding: 2vh 2vw 0vh 3vw;
     grid-column: 2 / 3;
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -60,11 +60,11 @@ input{
 
 .profile{
     display: inline-block;
-    background-color: #FDE68A;
+    background-color: #eec84b;
     border-radius: 50%;
     width: max(50px, 3.5vw);
     height: max(50px, 3.5vw);
-    background-image: url('./img/avatar1.png');
+    background-image: url('./img/cookie.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: max(40px, 2.5vw) max(40px, 2.5vw);
@@ -102,11 +102,15 @@ button{
     background-color: #51a8da;
     border-radius: 30px;
     width: max(60px, 5vw);
-    height: 4vh;
+    height: max(30px, 4vh);
     border: none;
     outline: none;
 }
 
+button:hover{
+    background-color: #9abfd4;
+    cursor: pointer;
+}
 
 
 #sidebar{
@@ -181,6 +185,9 @@ li{
     padding: 2vh 2vw;
     border-radius: 10px;
     background-color: white;
+    -webkit-box-shadow: 1px 4px 9px -6px;
+    -moz-box-shadow: 1px 4px 9px -6px;;
+    box-shadow: 1px 4px 9px -6px;
 }
 
 #side-content{
